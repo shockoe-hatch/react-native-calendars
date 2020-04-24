@@ -8,7 +8,7 @@ export default function(theme={}) {
   return StyleSheet.create({
     header: {
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       paddingLeft: 10,
       paddingRight: 10,
       marginTop: 6,

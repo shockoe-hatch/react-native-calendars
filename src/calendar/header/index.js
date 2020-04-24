@@ -189,7 +189,7 @@ class CalendarHeader extends Component {
                 // accessible={false} // not working
                 // importantForAccessibility='no'
               >
-                {day}
+                {day.charAt(0)}
               </Text>
             ))}
           </View>
