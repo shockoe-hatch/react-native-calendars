@@ -84,12 +84,14 @@ class Day extends Component {
       }
 
       const color = next.color;
+      const onlySelected = next.onlySelected;
       if (next.status === 'NotAvailable') {
         prev.textStyle = this.style.naText;
       }
       if (next.startingDay) {
         prev.startingDay = {
-          color
+          color,
+          onlySelected,
         };
       }
       if (next.endingDay) {
@@ -149,7 +151,7 @@ class Day extends Component {
           backgroundColor: this.theme.calendarBackground
         };
         rightFillerStyle = {
-          backgroundColor: flags.startingDay.color
+            backgroundColor: flags.startingDay.onlySelected ? this.theme.calendarBackground : this.theme.rangeColor,
         };
         containerStyle.push({
           backgroundColor: flags.startingDay.color
@@ -159,7 +161,7 @@ class Day extends Component {
           backgroundColor: this.theme.calendarBackground
         };
         leftFillerStyle = {
-          backgroundColor: flags.endingDay.color
+            backgroundColor: this.theme.rangeColor
         };
         containerStyle.push({
           backgroundColor: flags.endingDay.color
