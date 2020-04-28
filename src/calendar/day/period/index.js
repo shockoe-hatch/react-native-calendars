@@ -164,7 +164,8 @@ class Day extends Component {
             backgroundColor: this.theme.rangeColor
         };
         containerStyle.push({
-          backgroundColor: flags.endingDay.color
+          backgroundColor: flags.endingDay.color,
+          borderRadius: 17
         });
       } else if (flags.day) {
         leftFillerStyle = {backgroundColor: flags.day.color};
